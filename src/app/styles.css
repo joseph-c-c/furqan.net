@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+* {
+    writing-mode: vertical-rl;
+}*/
+
+.hafs {
+    direction: rtl;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* This will create as many columns as can fit, each between 300px and 1fr */
+}
+
+.text-box {
+    font-size: calc(5px + 3vmin); /* Adjust font size based on container size */
+    /* Additional styling */
+}
+
+/* Availability for skip navigation at the very top of website when accessing tabindex=1 */
+.c__sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.c__sr-only:focus {
+    position: unset !important;
+}
+
+/* Label for select that is invisible to hide an element, but still maintain its place in the DOM */
+.c__visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
